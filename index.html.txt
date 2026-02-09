@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Chocolate Day 🍫</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #5a2d0c, #8b4513);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #3e1f0e;
+      border: none;
+      padding: 12px 20px;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #2b1509;
+      transform: scale(1.05);
+    }
+
+    .chocolate {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .quote {
+      margin-top: 20px;
+      font-style: italic;
+      color: #ffd9b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="chocolate">🍫</div>
+    <h1>Happy Chocolate Day!</h1>
+    <p>Because every sweet moment deserves a little chocolate.</p>
+    <button onclick="showQuote()">Get a Chocolate Quote</button>
+    <div class="quote" id="quote"></div>
+  </div>
+
+  <script>
+    const quotes = [
+      "All you need is love… and chocolate 🍫",
+      "Life happens, chocolate helps 💝",
+      "Chocolate is happiness you can eat 😋",
+      "A day without chocolate is a day wasted ❤️",
+      "Keep calm and eat chocolate 🍬"
+    ];
+
+    function showQuote() {
+      const random = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[random];
+    }
+  </script>
+
+</body>
+</html>
